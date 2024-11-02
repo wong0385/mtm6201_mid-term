@@ -15,9 +15,11 @@
 </head>
 <body>
     <div class="container">
+        <a href="#nav" class="skip">Skip to nav</a>
+        <a href="#content" class="skip">Skip to content</a>
         <header>
             <h1>The System</h1>
-            <nav>
+            <nav id="nav">
                 <ul>
                     <li><a href="#">Planets</a></li>
                     <li><a href="#">Interstellar</a></li>
@@ -25,8 +27,8 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <div>
+        <main id="content">
+            <div class="banner">
                 <p>The System Magazine</p>
                 <p>Welcome to the Solar System</p>
                 <p>Take a tour around the coolest stellar system around.</p>
@@ -36,32 +38,33 @@
                 <div>
                     <image src="images/sun.jpg" alt="an image of the Sun"></image>
                     <p>The Sun</p>
-                    <button type="button">Learn More</button>
+                    <!-- <button type="button">Learn More</button> -->
+                    <a href="https://en.wikipedia.org/wiki/Sun">Learn More</a>
                 </div>
                 <div>
                     <image src="images/mercury.jpg" alt="an image of Mercury"></image>
                     <p>Mercury</p>
-                    <button type="button">Learn More</button>
+                    <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">Learn More</a>
                 </div>
                 <div>
                     <image src="images/venus.jpg" alt="an image of Venus"></image>
                     <p>Venus</p>
-                    <button type="button">Learn More</button>
+                    <a href="https://en.wikipedia.org/wiki/Venus">Learn More</a>
                 </div>
                 <div>
                     <image src="images/earth.jpg" alt="an image of Earth"></image>
                     <p>Earth</p>
-                    <button type="button">Learn More</button>
+                    <a href="https://en.wikipedia.org/wiki/Earth">Learn More</a>
                 </div>
                 <div>
-                    <image src="images/moon.jpg" alt="an image of the Moom"></image>
+                    <image src="images/moon.jpg" alt="an image of the Moon"></image>
                     <p>The Moon</p>
-                    <button type="button">Learn More</button>
+                    <a href="https://en.wikipedia.org/wiki/Moon">Learn More</a>
                 </div>
                 <div>
                     <image src="images/mars.jpg" alt="an image of Mars"></image>
                     <p>Mars</p>
-                    <button type="button">Learn More</button>
+                    <a href="https://en.wikipedia.org/wiki/Mars">Learn More</a>
                 </div>
             </div>
         </main>

@@ -6,24 +6,92 @@ body {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
+    text-align: center;
+}
+
+/* custom properties */
+:root {
+    --button-colour-blue: #0065A8;
+    --buttun-colour-purple: #800080;
+    --button-colour-hover: #4BD1D3;
+}
+
+/* skip links */
+.skip {
+    position: absolute;
+    top: -100em;
+    text-decoration: none;
+    color: black;
+}
+
+.skip:focus {
+    top: -15px;
+    background-color: white;
+    display: block;
+    padding: 20px 15px 10px 15px;
+    border: 5px solid red;
+    border-radius: 15px;
+}
+
+/* links settings */
+a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+/* nav bar */
+header {
+    height: 100px;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
     text-transform: uppercase;
+    margin: 15px;
 }
 
 header nav ul {
     display: flex;
+    justify-content: space-around;
+    margin: 25px;
 }
 
+nav li:nth-of-type(1) {
+    background-color: black;
+    border: 10px solid black;
+    border-radius: 20px;
+}
 
-header nav a {
-    text-decoration: none;
-    color: white;
-    
+nav li:nth-of-type(2) {
+    background-color: black;
+    border: 10px solid black;
+    border-radius: 20px;
+}
+
+nav li:nth-of-type(3) {
+    background-color: var(--button-colour-blue);
+    border: 10px solid var(--button-colour-blue);
+    border-radius: 20px;
+}
+
+nav li:hover {
+    background-color: var(--button-colour-hover);
+    border: 10px solid var(--button-colour-hover);
+    border-radius: 20px;
+}
+
+nav li a:hover {
+    color: black;
+}
+
+/* banner */
+.banner {
+    height: 600px;
+    background-image: url(../images/milky-way.jpg);
+    background-size: cover;
 }
