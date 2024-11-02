@@ -1,6 +1,7 @@
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    font-weight: bold;
     background-color: black;
     color: white;
 }
@@ -51,6 +52,7 @@ header {
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
+    font-weight: normal;
     text-transform: uppercase;
     margin: 15px;
 }
@@ -91,7 +93,112 @@ nav li a:hover {
 
 /* banner */
 .banner {
-    height: 600px;
-    background-image: url(../images/milky-way.jpg);
-    background-size: cover;
+    /* background-image: url(../images/milky-way.jpg);
+    background-size: cover; */
+    margin: 15px 0 10px 0;
+    padding: 0 0 50px 0;
+    position: relative;
+}
+
+.hero {
+    max-width: 100%;
+    height: 625px;
+}
+
+.banner_text {
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_text p {
+    font-weight: normal;
+}
+
+.banner_text p:nth-of-type(1) {
+    text-transform: uppercase;
+    word-spacing: 0.5rem;
+}
+
+.banner_text p:nth-of-type(2) {
+    font-size: 2.75rem;
+    line-height: 1.5;
+}
+
+.banner_text p:nth-of-type(3) {
+    margin-top: 25px;
+}
+
+/* the locals */
+.locals {
+    margin: 20px 0 40px 0;
+}
+
+.locals h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.planets p {
+    font-size: 1.5rem;
+    margin: 20px 0 50px 0;
+}
+
+.planets {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 40px;
+}
+
+.planets div:nth-of-type(1) a{
+    background-color: var(--buttun-colour-purple);
+    border: 7px solid var(--buttun-colour-purple);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.planets div:nth-of-type(2) a{
+    background-color: var(--buttun-colour-purple);
+    border: 7px solid var(--buttun-colour-purple);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.planets div:nth-of-type(3) a{
+    background-color: var(--button-colour-blue);
+    border: 7px solid var(--button-colour-blue);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.planets div:nth-of-type(4) a{
+    background-color: var(--button-colour-blue);
+    border: 7px solid var(--button-colour-blue);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.planets div:nth-of-type(5) a{
+    background-color: var(--buttun-colour-purple);
+    border: 7px solid var(--buttun-colour-purple);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+.planets div:nth-of-type(6) a{
+    background-color: var(--buttun-colour-purple);
+    border: 7px solid var(--buttun-colour-purple);
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+footer {
+    display: block;
+    border-top: 2px solid rgb(24, 24, 24);
+    padding: 30px 0 20px 0;
+    margin: 70px 20px 0 20px;
 }
