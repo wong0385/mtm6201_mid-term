@@ -17,9 +17,9 @@
     <div class="container">
         <a href="#nav" class="skip">Skip to nav</a>
         <a href="#content" class="skip">Skip to content</a>
-        <header>
+        <header role="banner">
             <h1>The System</h1>
-            <nav id="nav">
+            <nav id="nav" role="navigation">
                 <ul>
                     <li><a href="#">Planets</a></li>
                     <li><a href="#">Interstellar</a></li>
@@ -27,16 +27,16 @@
                 </ul>
             </nav>
         </header>
-        <main id="content">
-            <div class="banner">
+        <main id="content" role="main">
+            <div class="intro">
                 <image class="hero" src="images/milky-way.jpg" alt="an image of milky way"></image>
-                <div class="banner_text">
+                <div class="intro_text">
                     <p>The System Magazine</p>
                     <p>Welcome to the Solar System</p>
                     <p>Take a tour around the coolest stellar system around.</p>
                 </div>
             </div>
-            <div class="locals">
+            <div class="locals" role="complementary">
                 <h2>Meet the Locals</h2>
                 <div class="planets">
                     <div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
         </main>
-        <footer>
+        <footer role="contentinfo">
             <p>&copy; 2024 - The System</p>
         </footer>
     </div>
