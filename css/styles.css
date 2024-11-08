@@ -20,7 +20,7 @@ body {
     --button-colour-hover: #4BD1D3;
 }
 
-/* skip links */
+/* skip links display setting */
 .skip {
     position: absolute;
     top: -50em;
@@ -41,29 +41,18 @@ body {
     z-index: 2;
 }
 
-/* links settings */
+/* links setting */
 a {
     text-decoration: none;
     color: white;
-    padding: 0px 15px;
+    padding: 0px 10px;
+    display: block;
+    transition: transform 0.15s ease-in-out;
 }
-
-/* a:hover {
-    color: black;
-    background-color: var(--button-colour-hover);
-    border: 7px solid var(--button-colour-hover);
-    border-radius: 20px;
-} */
-
-/* a:focus {
-    padding: 7px 18px;
-    border: 4px solid red;
-    border-radius: 30px;
-} */
 
 /* nav bar */
 header {
-    height: 100px;
+    height: 95px;
 }
 
 h1 {
@@ -72,7 +61,7 @@ h1 {
     font-weight: normal;
     text-transform: uppercase;
     word-spacing: 0.75rem;
-    margin: 20px 0 40px 0;
+    margin: 20px 0 30px 0;
 }
 
 .stripe {
@@ -100,10 +89,6 @@ header nav li {
     margin: 0 10px;
 }
 
-nav li a {
-    transition: transform 1s ease-in-out;
-}
-
 nav li:nth-of-type(1) a, nav li:nth-of-type(2) a {
     background-color: black;
     border: 7px solid black;
@@ -116,40 +101,27 @@ nav li:nth-of-type(3) a {
     border-radius: 20px;
 }
 
-nav li a:hover {
-    color: black;
-    background-color: var(--button-colour-hover);
-    border: 7px solid var(--button-colour-hover);
-    border-radius: 20px;
-    transform: scale(2);
-}
-
-nav li a:focus {
-    padding: 7px 18px;
-    border: 4px solid red;
-    border-radius: 30px;
-}
-
-/* intro */
+/* banner of hero image with text flexed on top */
 .intro {
-    height: 700px;
+    height: 600px;
     margin: 15px 0 10px 0;
     padding: 0 0 50px 0;
     position: relative;
-    overflow: hidden;
+    background-image: url(../images/milky-way.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 }
 
 .intro img {
-    /* width: 200%; */
-    height: 100%;
-
+    display: none;
 }
 
 .intro_text {
     line-height: 2;
     padding: 0 60px;
     position: absolute;
-    top: 50%;
+    top: 53%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,7 +152,7 @@ nav li a:focus {
     background-position: 0% 0%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: textScroll 6s infinite alternate;
+    animation: textScroll 3s infinite alternate;
 }
 
 @keyframes textScroll {
@@ -193,14 +165,14 @@ nav li a:focus {
     }
 }
 
-/* the locals */
+/* planets with their name and link arranged in grid */
 .planets-container {
     margin: 20px 0 40px 0;
 }
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin: 50px 0 30px 0;
 }
 
 .planets p {
@@ -220,7 +192,6 @@ h2 {
     border-radius: 20px;
 }
 
-
 .planets div:nth-of-type(3) a, .planets div:nth-of-type(4) a {
     background-color: var(--button-colour-blue);
     border: 7px solid var(--button-colour-blue);
@@ -228,29 +199,31 @@ h2 {
 }
 
 .planets div a {
-    transition: transform 1s ease-in-out;
+    width: 90px;
+    margin: auto;
 }
 
-.planets div a:hover {
-    color: black;
-    background-color: var(--button-colour-hover);
-    border: 7px solid var(--button-colour-hover);
-    border-radius: 20px;
-    transform: scale(2);
-}
-
-.planets div a:focus {
-    padding: 7px 18px;
-    border: 4px solid red;
-    border-radius: 30px;
-}
-
-/* footer */
+/* footer in center with top border */
 footer {
     display: block;
     border-top: 2px solid rgb(24, 24, 24);
     padding: 30px 0 20px 0;
     margin: 70px 20px 0 20px;
+}
+
+/* links setting on hover state and focus state */
+nav li a:hover, .planets div a:hover {
+    color: black;
+    background: var(--button-colour-hover);
+    border: 7px solid var(--button-colour-hover);
+    border-radius: 20px;
+    transform: scale(1.15);
+}
+
+nav li a:focus, .planets div a:focus {
+    padding: 7px 18px;
+    border: 4px solid red;
+    border-radius: 30px;
 }
 
 @media screen and (min-width: 500px) {
@@ -259,15 +232,17 @@ footer {
     }
 
     .intro {
-        height: 600px;
+        height: 550px;
     }
 
     .intro img {
         width: 125%;
     }
 
+    /* align text on the left corner when reaching 500px breakpoint */
     .intro_text {
-        top: 60%;
+        top: 65%;
+        padding: 0 30px;
         text-align: justify;
         align-items: flex-start;
     }
@@ -292,14 +267,19 @@ footer {
 
     .intro {
         height: 600px;
+        background-image: none;
         border-radius: 50px;
-        /* overflow: hidden; */
+        overflow: hidden;
+    }
+
+    .intro_text {
+        padding: 0 60px;
     }
 
     .intro img {
         width: 100%;
-        animation: zoom 9s infinite ease-in-out alternate;
         display: block;
+        animation: zoom 9s infinite ease-in-out alternate;
     }
     
     @keyframes zoom {
@@ -326,6 +306,7 @@ footer {
         grid-template-columns: repeat(6, 1fr);
     }
 
+    /* links setting on colour when reaching 900px breakpoint */
     .planets div:nth-of-type(3) a, .planets div:nth-of-type(4) a {
         background-color: var(--buttun-colour-purple);
         border: 7px solid var(--buttun-colour-purple);
@@ -343,7 +324,7 @@ footer {
         background-color: var(--button-colour-hover);
         border: 7px solid var(--button-colour-hover);
         border-radius: 20px;
-        transform: scale(2);
+        transform: scale(1.15);
     }
 
     .planets div:nth-of-type(3) a:focus, .planets div:nth-of-type(4) a:focus, .planets div:nth-of-type(6) a:focus {
@@ -351,5 +332,4 @@ footer {
         border: 4px solid red;
         border-radius: 30px;
     }
-    
 }
