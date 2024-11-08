@@ -203,7 +203,7 @@ h2 {
     margin: auto;
 }
 
-/* footer in center with top border */
+/* footer aligned center with top border */
 footer {
     display: block;
     border-top: 2px solid rgb(24, 24, 24);
